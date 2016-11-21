@@ -1,0 +1,29 @@
+
+
+#tabling
+adjust_l = 15
+adjust_r = 15
+
+#get number
+print "Number  ".rjust(adjust_l)
+input = num = gets.to_i
+
+#number goes in all three arrays.
+      all = [] << num 
+factorial = [] << num 
+   factor = [] << num 
+
+   
+while num > 1
+  num -= 1
+  all << num
+  factorial << num * factorial.pop
+  if input % num == 0
+    factor << num
+  end
+end
+
+puts "Array  ".rjust(adjust_l)     + "#{all.reverse}"
+puts "Factorial  ".rjust(adjust_l) + "[#{factorial.pop}]"
+puts "Factors  ".rjust(adjust_l)   + "#{factor}"
+
